@@ -1,0 +1,125 @@
+body {
+	background-color: white;
+	color: rgb(74, 74, 74);
+	font-family: Avenir;
+	margin: 0;
+	transition: background-color 5s;
+}
+
+.container {
+	margin: auto;
+	padding-top: 25vh;
+	position: relative;
+	width: 90vw;
+}
+
+.header-frame {
+	line-height: 30px;
+	width: auto;
+}
+
+.header-text {
+	font-size: 30px;
+	line-height: 30px;
+	vertical-align: top;
+	font-weight:500;
+}
+
+.search {
+	height: 40px;
+	margin: auto;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.npr-link {
+	text-decoration: none;
+}
+
+.modal {
+	margin-right:15px;
+	float:right;
+	font-weight: 500;
+	padding-top: 5px;
+	cursor:pointer;
+}
+
+.modal-background {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	position: absolute;
+	z-index: 900;
+	background:
+		linear-gradient(
+			to bottom,
+			#568FCB,
+			transparent);
+}
+
+.modal-text {
+	display: none;
+	height: 585px;
+	width: 250px;
+	border-radius: 3px;
+	background-color: white;
+	padding: 20px;
+	top: 1%;
+	margin:auto;
+	position: sticky;
+	z-index: 999;
+}
+
+.close-modal {
+	float:right;
+	cursor: pointer;
+}
+
+.header-content {
+	padding-left: 25px;
+	font-size: 20px;
+	color: #568FCB;
+	font-weight: 600;
+}
+
+.emily-left {
+	height: 40%;
+	width: 100%;
+	font-size: 18px;
+}
+
+.bob-right {
+	height: 40%;
+	width: 100%;
+	font-size: 18px;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+li {
+	color: #568FCB;
+}
+
+.content {
+	margin-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.result {
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.4);
+}
+
+.artist {
+	font-size: 30px;
+}
+
+.description {
+	min-height: 160px;
+	font-size: 22px;
+}
