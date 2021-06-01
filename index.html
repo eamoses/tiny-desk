@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tiny Desk Search</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/coffee.css">
+    <link rel="stylesheet" href="styles/github.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74456050-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-74456050-2');
+    </script>
+  </head>
+  <body>
+    <div id="open-modal" class="modal-background"></div>
+    <div id="modal-text" class="modal-text">
+      <div id="close-modal" class="close-modal" tabindex="0">❌</div>
+      <br>
+      <div class="modal-header">
+        <div class="header-content">Meet the creator</div>
+      </div>
+      <div class="text">
+        <hr>
+        <div class="emily-left">
+          <img width="200px;" src="images/emily.png" style="border-radius:50%;display:block;margin-left:auto;margin-right:auto;" alt="Donate to Emily">
+          <ul>
+            <li>
+              + <a href="https://www.buymeacoffee.com/emilyannemoses" class="link-style">Buy Emily a Coffee</a>
+            </li>
+            <br>
+            <li>
+              + <a href="https://github.com/sponsors/eamoses" class="link-style">GitHub</a>
+            </li>
+            <br>
+            <li>
+              + <a href="mailto:eamoses@email.com" class="link-style">Email</a>
+            </li>
+            <br>
+            <li>
+              + <a href="https://www.instagram.com/emilyannemoses/" class="link-style">Instagram</a>
+            </li>
+            <br><br>
+          </ul>
+          <br><br>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div id="dayNight" onclick="changeDayNight();" tabindex="5">
+      <div id="sun" class="toggle">
+        <img class="toggle-images" src="images/sun.png" alt="sun icon">
+      </div>
+      <div id="moon" class="toggle">
+        <img id="moonImage" class="toggle-images" src="images/moon.png" alt="moon icon">
+      </div>
+    </div>
+    <div class="container" id="container">
+      <div class="header-frame">
+        <a href="https://www.npr.org/series/tiny-desk-concerts/" target="_blank" class="npr-link" tabindex="4">
+          <img id="npr-logo" src="images/music-logo-dark.svg" alt="NPR Music Logo" width="200px" height="32px" vertical-align="middle">
+        </a>
+          <span class="header-text">Tiny Desk Concert Search</span>
+      </div>
+      <br /><br />
+      <input autocomplete="off" id="search" class="search" type="text" placeholder="Search artists, genre, keyword or date (February 16, 2013)" tabindex="6">
+      <span id="modal" class="modal" tabindex="3">
+          Made with
+        <img height="12px" src="images/heart-emoji.png">
+          by
+        <span class="link-style" style="text-decoration:underline;">
+          Emily Anne Moses
+        </span>
+      </span>
+      <br /><br />
+      <div id="results" class="results"></div>
+    </div>
+    <a href="https://www.buymeacoffee.com/emilyannemoses" id="coffeeContainer" alt="Buy me a coffee!" target="_blank" tabindex="1">
+      <img id="mugImg" src="images/mug.svg" alt="Coffee mug icon">
+      <span class="tooltiptext">Buy me a coffee?</span>
+    </a>
+    <a href="https://github.com/sponsors/eamoses" target="_blank" id="githubContainer" alt="Sponsor me on GitHub!" tabindex="2">
+      <img src="images/github-icon.png" height="48px" width="auto" alt="GitHub icon">
+      <span class="ghtooltiptext">Sponsor me on GitHub?</span>
+    </a>
+  </body>
+  <script src="scripts/app.js" charset="utf-8"></script>
+  <script src="scripts/coffee.js" charset="utf-8"></script>
+  <script src="scripts/github.js" charset="utf-8"></script>
+  <script src="scripts/modal.js" charset="utf-8"></script>
+</html>

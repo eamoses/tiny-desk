@@ -1,0 +1,45 @@
+#dayNight {
+	float: right;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+	right: 0px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.2);
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.3);
+  border-radius: 25px;
+  height: 25px;
+  width: 90px;
+  line-height: 20px;
+  transition: background-color 5s;
+	z-index: 1;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  top: 2px;
+}
+
+.toggle-images {
+  width: 22px;
+}
+
+#sun {
+	font-size: 15px;
+  left: 1px;
+  transition: left 3s;
+  transition-timing-function: cubic-bezier(0,0,0.1,1);
+}
+
+#moon {
+	font-size: 13px;
+  top: 1px;
+  right: -42px;
+  opacity: 0.95;
+}
+
+#moonImage {
+  width: 20px;
+}

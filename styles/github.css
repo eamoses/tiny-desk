@@ -1,0 +1,36 @@
+#githubContainer {
+	text-decoration: none;
+	bottom: 5px;
+	right: 9px;
+	float:right;
+	position: fixed;
+  opacity: 0;
+  transition: width .15s, opacity .5s;
+}
+
+.ghtooltiptext {
+  visibility: hidden;
+  background-color: #568FCB;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+	margin-left: -240px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#githubContainer:hover .ghtooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.link-style {
+	color:#568FCB;
+}
+
+.link-style:hover {
+	color: #2C63ae;
+}
