@@ -6,7 +6,7 @@ This is a basic text matching filter I've created from the data on [NPR's Tiny D
 
 ## GAS Stack Integration
 
-I'm using Google Apps Scripts to automate a Twitter bot (@TinyDeskBot) to tweet out a random Tiny Desk Concert every four hours.  
+I'm using Google Apps Scripts to automate a Twitter bot (www.twitter.com/TinyDeskBot) to tweet out a random Tiny Desk Concert every four hours.  
 
 The data is coming from the Node.js program I wrote (not currently public yet) to scrape the NPR Music website for their archive of Tiny Desk concerts.  
 
