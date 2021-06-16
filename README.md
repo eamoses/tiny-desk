@@ -14,7 +14,7 @@ I am doing this manually and copy/pasting the large data set over into the `data
 
 ## My Motivation
 
-They do make available an archive which organizes concerts by year and month, but if you want to search by artist you have to use [NPR's main search](https://www.npr.org/search) which also searches news articles and things unrelated to Tiny Desk.
+NPR made available an archive which organizes concerts by year and month, but if you want to search by artist you have to use [NPR's main search](https://www.npr.org/search) which also searches news articles and things unrelated to Tiny Desk.
 
 I hope you like my creation! There's always room for improvements. If you'd like to add a suggestion, my email is e.a.moses@gmail.com
 
