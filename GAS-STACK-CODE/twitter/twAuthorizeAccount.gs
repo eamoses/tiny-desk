@@ -22,7 +22,7 @@ function authorizeAccount() {
     return false
   } else {
     console.log("Success Authorizating")
-    return { 
+    return {
       service: service,
       params: params
     }

@@ -1,4 +1,4 @@
-function postTweet({ service, params, tweet, replyId, sheetToUpdateID, newRowAt }) {
+function postTweet({ service, params, tweet, replyId, sheetToUpdateID, newRowAt, tweetLength }) {
 
   if (service) {
 
@@ -14,7 +14,7 @@ function postTweet({ service, params, tweet, replyId, sheetToUpdateID, newRowAt 
       var response = service.sendTweet(tweet, params)
       if (response) {
         if (sheetToUpdateID) {
-          updateTweetLog(response, tweet, sheetToUpdateID, replyId, newRowAt)
+          updateTweetLog(response, tweet, sheetToUpdateID, replyId, newRowAt, tweetLength)
         }
         console.log(response)
       } else {
@@ -27,17 +27,31 @@ function postTweet({ service, params, tweet, replyId, sheetToUpdateID, newRowAt 
   } else { Logger.log("something wrong with service") }
 }
 
-function updateTweetLog(response, tweet, sheetToUpdateID, replyId, newRowAt) {
-  const ss = getSheetById(sheetToUpdateID)
-  ss.insertRowBefore(newRowAt)
-  const newRowRange = ss.getRange(newRowAt+":"+newRowAt)
-  const newRow = newRowRange.getValues()
+function updateTweetLog(response, tweet, sheetToUpdateID, replyId, newRowAt, tweetLength) {
+  const ss = getSheetById(sheetToUpdateID);
+  ss.insertRowBefore(newRowAt);
+  const newRowRange = ss.getRange(newRowAt+":"+newRowAt);
+  const newRow = newRowRange.getValues();
+  const currentdate = new Date();
+  let datetime = "Last Sync: "
+                + (currentdate.getMonth()+1)
+                + "/"
+                + currentdate.getDate()
+                + "/"
+                + currentdate.getFullYear()
+                + " @ "
+                + currentdate.getHours()
+                + ":"
+                + currentdate.getMinutes()
+                + ":"
+                + currentdate.getSeconds();
   const newRowValues =
-  [ // Order is specific!
+  [ // WARNING! Order is specific!
     ( replyId ? "ReTweet" : "Tweet"),
       response.user.screen_name,
-      response.created_at,
-      tweet,
+      datetime,
+      tweetLength,
+      tweet, // Hashtags coming from cell B4
       '=hyperlink("https://twitter.com/'+response.user.screen_name+'/status/'+response.id_str+'")',
       response.id_str,
       response.user.id_str,
