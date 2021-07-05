@@ -2,18 +2,32 @@ function triggerTweetPost() {
   let data = getData();
   let n = numberPicker(data);
   let authorize = authorizeAccount();
-  let tweetLength = data[n].artist.length
-                  + data[n].description.length
-                  + data[n].link.length
-                  + 19; // hardcoded hashtags length
+  let tinyDeskDate = data[n].description.substring(9, data[n].description.indexOf('•'));
+  let tweetLength = data[n].artist.length 
+                  + data[n].description.length 
+                  + 23; // Link length is 23 characters no matter what
+  let shortTweetLength = data[n].artist.length
+                  + tinyDeskDate.length
+                  + 23;
   if(tweetLength >= 280) {
     postTweet({
       service: authorize.service,
       params: authorize.params,
-      tweet: '#tinydesk #nprmusic'
-              + '\n'
-              + data[n].artist
-              + '\n'
+      tweet: data[n].artist
+              + '\n' 
+              + tinyDeskDate
+              + '\n' 
+              + data[n].link,
+      sheetToUpdateID: 830299951,
+      newRowAt: 2,
+      tweetLength: tweetLength
+    })
+  } else if (shortTweetLength >= 280){
+    postTweet({
+      service: authorize.service,
+      params: authorize.params,
+      tweet: data[n].artist 
+              + '\n' 
               + data[n].link,
       sheetToUpdateID: 830299951,
       newRowAt: 2,
@@ -23,12 +37,10 @@ function triggerTweetPost() {
     postTweet({
       service: authorize.service,
       params: authorize.params,
-      tweet: '#tinydesk #nprmusic'
-              + '\n'
-              + data[n].artist
-              + '\n'
+      tweet: data[n].artist
+              + '\n' 
               + data[n].description
-              + '\n'
+              + '\n' 
               + data[n].link,
       sheetToUpdateID: 830299951,
       newRowAt: 2,
