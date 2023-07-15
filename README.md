@@ -18,6 +18,6 @@ NPR made available an archive which organizes concerts by year and month, but if
 
 I hope you like my creation! There's always room for improvements. If you'd like to add a suggestion, my email is e.a.moses@gmail.com
 
-Or, if you'd like to throw me a few 💸 (dollars) of appreciation, feel free to [buy me a coffee ☕️](https://www.buymeacoffee.com/emilyannemoses) or [sponsor me on GitHub](https://github.com/sponsors/eamoses)
+Or, if you'd like to throw me a few 💸 (dollars) of appreciation, feel free to [buy me a coffee ☕️](https://www.buymeacoffee.com/emilyannemoses) or [sponsor me on GitHub](https://github.com/sponsors/emilyannemoses)
 
 ♥️
